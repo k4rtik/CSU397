@@ -6,4 +6,5 @@
 read word
 read wordd
 read file
-sed -i s/$word/$wordd/g $file
+replace $word $wordd -- $file
+#sed -i s/$word/$wordd/g $file

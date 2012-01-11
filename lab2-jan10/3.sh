@@ -4,7 +4,7 @@
 # ending up with a prompt with your name and you will be able to execute all
 # scripts (questions given for lab assignmnet 1 and 2)with short commands.
 
-export PATH=$PATH:`pwd`/../lab1-jan4
+export PATH=$PATH:`pwd`/lab1-jan4:`pwd`/lab2-jan10
 while :
 do
 	echo -n "kartik `pwd` > "

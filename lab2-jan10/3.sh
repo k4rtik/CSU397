@@ -5,10 +5,9 @@
 # scripts (questions given for lab assignmnet 1 and 2)with short commands.
 
 export PATH=$PATH:`pwd`/../lab1-jan4
-echo $PATH
 while :
 do
-	echo -ne "kartik > "
+	echo -n "kartik `pwd` > "
 	read comm
 	$comm
 done

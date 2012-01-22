@@ -7,7 +7,7 @@
 #include <fcntl.h>	//open, creat
 #include "syscalls.h"	//error
 
-#define BUFSIZE 4096
+#define BUFSIZE 1024
 #define PERMS 0600
 
 int main(int argc, char *argv[])

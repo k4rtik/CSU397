@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Given two files, returns the number of common words
+
+cat "$1" | tr 'A-Z ' 'a-z\n' | sort -u > .file1
+cat "$2" | tr 'A-Z ' 'a-z\n' | sort -u > .file2
+lc=`wc -l .file1 | cut -f1 -d' '`
+rc=`wc -l .file2 | cut -f1 -d' '`
+sum=`expr $lc + $rc`
+dff=`diff .file* | grep [\>\<] | wc -l`
+comm=`expr $sum - $dff`
+comm=`expr $comm / 2`
+echo $comm

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Given two files, returns the number of common words
+
+cat "$1" | tr 'A-Z ' 'a-z\n' | sort -u > .file1
+cat "$2" | tr 'A-Z ' 'a-z\n' | sort -u > .file2
+count=0
+for word in `cat .file1`
+do
+	grep $word .file2 
+	if [ $? -eq 0 ]
+	then
+		((count++))
+	fi
+done
+echo $count

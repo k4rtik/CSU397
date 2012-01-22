@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <stdarg.h>
 
+#define BUFSIZE 1024
+
 void error(char *message, ...)
 {
 	va_list args;

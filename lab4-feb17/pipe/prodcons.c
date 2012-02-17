@@ -1,4 +1,6 @@
-#include "shared.h"
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 int produce_item() {
         return 1;

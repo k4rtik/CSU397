@@ -16,8 +16,7 @@ int main()
         int pipefd[2];
 	pid_t pid;
 
-	if (pipe(pipefd) == -1)
-	{
+	if (pipe(pipefd) == -1)	{
                 printf("pipe: error creating pipe");
 		exit(-1);
 	}

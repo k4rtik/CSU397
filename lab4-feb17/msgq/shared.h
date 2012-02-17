@@ -9,11 +9,5 @@
 
 #define MSGQ_KEY 9
 
-struct msgbuf {
-	long mtype;       /* message type, must be > 0 */
-        int mtext[BUFFER_SIZE];    /* message data */
-} *msgp;
-
-int *create_msgq();
-void clear_buffer(int *sbuf);
+int create_msgq();
 void print_buffer(int *sbuff);

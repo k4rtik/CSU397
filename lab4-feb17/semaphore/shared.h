@@ -24,6 +24,5 @@ static struct sembuf incMutex = { MUTEX_ID, 1, 0 };
 
 int *create_shared_mem_buffer();
 int create_semaphore_set();
-int get_buffer_size(int *sbuff);
 void clear_buffer(int *sbuf);
 void print_buffer(int *sbuff);

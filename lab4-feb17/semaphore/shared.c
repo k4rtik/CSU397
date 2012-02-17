@@ -48,17 +48,6 @@ int create_semaphore_set() {
         return semid;
 }
 
-int get_buffer_size(int *sbuff) {
-        int i = 0;
-        int counter = 0;
-        for (i = 0; i < BUFFER_SIZE; ++i) {
-                if (sbuff[i] == 1) {
-                        counter++;
-                } 
-        }
-        return counter;
-}
-
 void clear_buffer(int *sbuff) {
         int i = 0;
         for (i = 0; i < BUFFER_SIZE; ++i)

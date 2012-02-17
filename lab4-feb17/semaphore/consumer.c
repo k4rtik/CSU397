@@ -5,9 +5,10 @@ void consume_item(int item) {
 }
 
 int remove_item(int semid, int *shared_buffer) {
-        int index = get_buffer_size(shared_buffer) - 1;
+        static int index = 0;
         int item = shared_buffer[index];
         shared_buffer[index] = 0;
+        index = (index+1) % BUFFER_SIZE;
         return item;
 }
 

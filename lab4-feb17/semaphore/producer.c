@@ -1,8 +1,9 @@
 #include "shared.h"
 
 void insert_item(int item, int *shared_buffer) {
-        int index = get_buffer_size(shared_buffer);
-        shared_buffer[index] = item; 
+        static int index = 0;
+        shared_buffer[index] = item;
+        index = (index+1) % BUFFER_SIZE;
 }
 
 int produce_item() {

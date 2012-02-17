@@ -4,7 +4,7 @@ void consume_item(int item) {
         ;
 }
 
-int remove_item(int semid, int *shared_buffer) {
+int remove_item(int *shared_buffer) {
         static int index = 0;
         int item = shared_buffer[index];
         shared_buffer[index] = 0;
@@ -22,7 +22,7 @@ int main()
         while(1) {
                 semop(semid, &decFull, 1);
                 semop(semid, &decMutex, 1);
-                item = remove_item(semid, shared_buffer);
+                item = remove_item(shared_buffer);
                 print_buffer(shared_buffer);
                 semop(semid, &incMutex, 1);
                 semop(semid, &incEmpty, 1);
